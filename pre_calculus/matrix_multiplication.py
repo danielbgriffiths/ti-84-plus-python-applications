@@ -1,9 +1,9 @@
-import common
+from common import gather_matrix, express_matrix, is_not_valid_matrix, INVALID_MATRIX_MESSAGE
 
 
 def matrix_multiplication(matrix1, matrix2):
-    if len(matrix1) != len(matrix2) or len(matrix1[0]) != len(matrix2[0]):
-        return "Matrices must have the same dimensions for multiplication."
+    if is_not_valid_matrix(matrix1, matrix2):
+        return INVALID_MATRIX_MESSAGE
 
     res = [[0 for _ in range(len(matrix2[0]))] for _ in range(len(matrix1))]
 
@@ -12,12 +12,14 @@ def matrix_multiplication(matrix1, matrix2):
             for i in range(len(matrix2)):
                 res[r][c] += matrix1[r][i] * matrix2[i][c]
 
-    return common.express_matrix(res)
+    return res
 
 
 print(
-    matrix_multiplication(
-        common.gather_matrix(),
-        common.gather_matrix()
+    express_matrix(
+        matrix_multiplication(
+            gather_matrix(),
+            gather_matrix()
+        )
     )
 )

@@ -15,3 +15,10 @@ def express_matrix(matrix):
     print("Resultant matrix:")
     for row in matrix:
         print(row)
+
+
+def is_not_valid_matrix(matrix1, matrix2):
+    return len(matrix1) != len(matrix2) or len(matrix1[0]) != len(matrix2[0])
+
+
+INVALID_MATRIX_MESSAGE = "Matrices must have the same dimensions for multiplication."

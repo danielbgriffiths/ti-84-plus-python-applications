@@ -1,4 +1,4 @@
-import math
+from math import sqrt, acos, cos, pi
 
 
 # Degree 1: Linear Polynomials
@@ -26,8 +26,8 @@ def second_degree_solution(coefficients):
     discriminant = b ** 2 - 4 * a * c
 
     if discriminant > 0:
-        root1 = (-b + math.sqrt(discriminant)) / (2 * a)
-        root2 = (-b - math.sqrt(discriminant)) / (2 * a)
+        root1 = (-b + sqrt(discriminant)) / (2 * a)
+        root2 = (-b - sqrt(discriminant)) / (2 * a)
         return root1, root2
 
     elif discriminant == 0:
@@ -36,7 +36,7 @@ def second_degree_solution(coefficients):
 
     else:
         real_part = -b / (2 * a)
-        imaginary_part = math.sqrt(-discriminant) / (2 * a)
+        imaginary_part = sqrt(-discriminant) / (2 * a)
         return complex(real_part, imaginary_part), complex(real_part, -imaginary_part)
 
 
@@ -56,8 +56,8 @@ def third_degree_solution(coefficients):
     discriminant = q ** 2 / 4 + p ** 3 / 27
 
     if discriminant > 0:
-        u = (-q / 2 + math.sqrt(discriminant)) ** (1 / 3)
-        v = (-q / 2 - math.sqrt(discriminant)) ** (1 / 3)
+        u = (-q / 2 + sqrt(discriminant)) ** (1 / 3)
+        v = (-q / 2 - sqrt(discriminant)) ** (1 / 3)
         root1 = u + v - b / (3 * a)
         return (root1,)
 
@@ -68,11 +68,11 @@ def third_degree_solution(coefficients):
         return root1, root2
 
     else:
-        r = math.sqrt(-p ** 3 / 27)
-        theta = math.acos(-q / (2 * r))
-        root1 = 2 * r ** (1 / 3) * math.cos(theta / 3) - b / (3 * a)
-        root2 = 2 * r ** (1 / 3) * math.cos((theta + 2 * math.pi) / 3) - b / (3 * a)
-        root3 = 2 * r ** (1 / 3) * math.cos((theta + 4 * math.pi) / 3) - b / (3 * a)
+        r = sqrt(-p ** 3 / 27)
+        theta = acos(-q / (2 * r))
+        root1 = 2 * r ** (1 / 3) * cos(theta / 3) - b / (3 * a)
+        root2 = 2 * r ** (1 / 3) * cos((theta + 2 * pi) / 3) - b / (3 * a)
+        root3 = 2 * r ** (1 / 3) * cos((theta + 4 * pi) / 3) - b / (3 * a)
         return root1, root2, root3
 
 

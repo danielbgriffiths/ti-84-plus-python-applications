@@ -1,4 +1,4 @@
-import common
+from common import gather_matrix
 
 
 def matrix_determinant(matrix):
@@ -17,6 +17,6 @@ def matrix_determinant(matrix):
 
 print(
     matrix_determinant(
-        common.gather_matrix()
+        gather_matrix()
     )
 )
