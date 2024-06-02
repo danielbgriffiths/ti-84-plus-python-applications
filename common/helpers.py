@@ -82,3 +82,4 @@ def str_to_func_input(func_string):
 INVALID_MATRIX_MESSAGE = "Matrices must have the same dimensions for multiplication."
 NO_REAL_SOLUTIONS = "No real solutions."
 INFINITE_SOLUTIONS = "Infinite solutions."
+INVALID_INPUT = "Invalid Input"
