@@ -1,3 +1,6 @@
+import math
+
+
 def get_float_input(prompt):
     while True:
         try:
@@ -60,6 +63,20 @@ def express_matrix(matrix):
 
 def is_not_valid_matrix(matrix1, matrix2):
     return len(matrix1) != len(matrix2) or len(matrix1[0]) != len(matrix2[0])
+
+
+def str_to_func_input(func_string):
+    safe_globals = {
+        '__builtins__': None,
+        'math': math
+    }
+
+    safe_locals = {}
+
+    if all(char in "0123456789+-*/().x " for char in func_string):
+        return eval("lambda x: " + func_string, safe_globals, safe_locals)
+    else:
+        raise ValueError("Invalid characters in function string")
 
 
 INVALID_MATRIX_MESSAGE = "Matrices must have the same dimensions for multiplication."

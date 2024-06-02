@@ -1,6 +1,6 @@
 import unittest
 
-from algebra.least_common_multiple.script import least_common_multiple
+from pre_calculus.least_common_multiple.script import least_common_multiple
 
 
 class TestLCM(unittest.TestCase):

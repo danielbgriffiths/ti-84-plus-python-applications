@@ -1,6 +1,6 @@
 import unittest
 
-from algebra.greatest_common_divisor.script import greatest_common_divisor
+from pre_calculus.greatest_common_divisor.script import greatest_common_divisor
 
 
 class TestGreatestCommonDivisor(unittest.TestCase):

@@ -1,4 +1,4 @@
-from algebra.greatest_common_divisor.script import greatest_common_divisor
+from pre_calculus.greatest_common_divisor.script import greatest_common_divisor
 
 
 def least_common_multiple(a, b):
