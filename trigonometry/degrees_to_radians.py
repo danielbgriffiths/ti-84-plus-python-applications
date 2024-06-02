@@ -1,4 +1,5 @@
 from math import pi
+from common import get_float_input
 
 
 def degrees_to_radians(degrees):
@@ -7,6 +8,6 @@ def degrees_to_radians(degrees):
 
 print(
     degrees_to_radians(
-        float(input("Enter the angle in degrees: "))
+        get_float_input("Enter the angle in degrees: ")
     )
 )

@@ -1,4 +1,4 @@
-from common import express_matrix, gather_matrix
+from common import express_matrix, gather_matrix, get_float_input
 
 
 def scalar_multiplication(scalar, matrix):
@@ -13,7 +13,7 @@ def scalar_multiplication(scalar, matrix):
 print(
     express_matrix(
         scalar_multiplication(
-            float(input("Enter the scalar: ")),
+            get_float_input("Enter the scalar: "),
             gather_matrix()
         )
     )

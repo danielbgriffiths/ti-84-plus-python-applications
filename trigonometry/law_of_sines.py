@@ -2,6 +2,7 @@ from math import sin, asin
 
 from degrees_to_radians import degrees_to_radians
 from radians_to_degrees import radians_to_degrees
+from common import get_float_input
 
 
 def law_of_sines_angles(side_a, angle_a, angle_b):
@@ -24,9 +25,9 @@ if unit_input not in ['degrees', 'radians']:
     raise ValueError('unit must be either "degrees" or "radians"')
 
 if variant_input == 'angles':
-    value_one = float(input("Enter angle alpha: "))
-    value_two = float(input("Enter angle beta: "))
-    value_three = float(input("Enter side A: "))
+    value_one = get_float_input("Enter angle alpha: ")
+    value_two = get_float_input("Enter angle beta: ")
+    value_three = get_float_input("Enter side A: ")
 
     value_one = value_one if unit_input == 'radians' else degrees_to_radians(value_one)
     value_two = value_two if unit_input == 'radians' else degrees_to_radians(value_two)
@@ -40,9 +41,9 @@ if variant_input == 'angles':
     )
 
 elif variant_input == 'sides':
-    value_one = float(input("Enter angle alpha: "))
-    value_two = float(input("Enter enter side A: "))
-    value_three = float(input("Enter enter side B: "))
+    value_one = get_float_input("Enter angle alpha: ")
+    value_two = get_float_input("Enter enter side A: ")
+    value_three = get_float_input("Enter enter side B: ")
 
     value_one = value_one if unit_input == 'radians' else degrees_to_radians(value_one)
 

@@ -1,4 +1,5 @@
 from math import sqrt, acos, cos, pi
+from common import NO_REAL_SOLUTIONS, INFINITE_SOLUTIONS, get_float_input, get_int_input
 
 
 # Degree 1: Linear Polynomials
@@ -8,7 +9,7 @@ def first_degree_solution(coefficients):
     b = coefficients[1]
 
     if a == 0:
-        return "-- None --" if b != 0 else "-- Infinite --"
+        return NO_REAL_SOLUTIONS if b != 0 else INFINITE_SOLUTIONS
 
     return -b / a
 
@@ -76,23 +77,23 @@ def third_degree_solution(coefficients):
         return root1, root2, root3
 
 
-def polynomial_root_solver(degree, coefficients):
+def polynomial_roots(degree, coefficients):
     if degree == 1:
-        return f"The root is {first_degree_solution(coefficients)}"
+        return first_degree_solution(coefficients)
     elif degree == 2:
-        return f"The root(s) is/are {second_degree_solution(coefficients)}"
+        return second_degree_solution(coefficients)
     elif degree == 3:
-        return f"The roots are {third_degree_solution(coefficients)}"
+        return third_degree_solution(coefficients)
     else:
         return f"Polynomial of degree {degree} is not supported."
 
 
-degree_input = int(input("Enter the degree of the polynomial: "))
+degree_input = get_int_input("Enter the degree of the polynomial: ")
 
 
 print(
-    polynomial_root_solver(
+    polynomial_roots(
         degree_input,
-        [float(input(f"Enter coefficient for x^{degree_input - i}: ")) for i in range(degree_input + 1)]
+        [get_float_input(f"Enter coefficient for x^{degree_input - i}: ") for i in range(degree_input + 1)]
     )
 )
