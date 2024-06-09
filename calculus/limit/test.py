@@ -1,5 +1,5 @@
 import unittest
-from math import sin, pi
+from common.helpers import sin, pi
 
 from calculus.limit.script import limit
 
@@ -23,7 +23,7 @@ class TestLimit(unittest.TestCase):
 
     def test_sine_function(self):
         self.assertAlmostEqual(limit(sin, 0), sin(0), delta=1e-5)
-        self.assertAlmostEqual(limit(sin, pi / 2), sin(pi / 2), delta=1e-5)
+        self.assertAlmostEqual(limit(sin, pi() / 2), sin(pi() / 2), delta=1e-5)
         self.assertAlmostEqual(limit(sin, pi), sin(pi), delta=1e-5)
 
     def test_function_with_rounding(self):

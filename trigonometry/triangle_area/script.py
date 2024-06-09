@@ -1,4 +1,4 @@
-from math import sin, sqrt
+from common.helpers import sin, sqrt
 
 
 BASE_HEIGHT = "base-height"

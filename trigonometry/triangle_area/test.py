@@ -1,5 +1,6 @@
 import unittest
-from math import radians, sin
+from math import radians
+from common.helpers import sin
 
 from trigonometry.triangle_area.script import base_height, sas, heron, coords
 

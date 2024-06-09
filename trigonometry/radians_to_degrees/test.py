@@ -1,5 +1,5 @@
 import unittest
-from math import pi
+from common.helpers import pi
 
 from trigonometry.radians_to_degrees.script import radians_to_degrees
 

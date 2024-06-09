@@ -1,7 +1,9 @@
 import unittest
-from math import pi, sin, cos, tan
+from common.helpers import pi as pi_fn, sin, cos, tan
 
 from trigonometry.sum_and_difference.script import sum_and_difference
+
+pi = pi_fn()
 
 
 class TestSumAndDifference(unittest.TestCase):

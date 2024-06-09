@@ -1,5 +1,4 @@
-from math import sqrt
-from common.helpers import NO_REAL_SOLUTIONS
+from common.helpers import NO_REAL_SOLUTIONS, sqrt
 
 
 def quadratic_equation(a, b, c):

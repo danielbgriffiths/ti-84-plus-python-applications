@@ -1,5 +1,4 @@
-from math import sqrt, acos, cos, pi
-from common.helpers import NO_REAL_SOLUTIONS, INFINITE_SOLUTIONS
+from common.helpers import NO_REAL_SOLUTIONS, INFINITE_SOLUTIONS, sqrt, pi, acos, cos
 
 
 # Degree 1: Linear Polynomials
@@ -72,8 +71,8 @@ def third_degree_solution(coefficients):
         r = sqrt(-p ** 3 / 27)
         theta = acos(-q / (2 * r))
         root1 = 2 * r ** (1 / 3) * cos(theta / 3) - b / (3 * a)
-        root2 = 2 * r ** (1 / 3) * cos((theta + 2 * pi) / 3) - b / (3 * a)
-        root3 = 2 * r ** (1 / 3) * cos((theta + 4 * pi) / 3) - b / (3 * a)
+        root2 = 2 * r ** (1 / 3) * cos((theta + 2 * pi()) / 3) - b / (3 * a)
+        root3 = 2 * r ** (1 / 3) * cos((theta + 4 * pi()) / 3) - b / (3 * a)
         return root1, root2, root3
 
 

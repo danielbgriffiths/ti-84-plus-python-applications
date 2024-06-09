@@ -1,4 +1,4 @@
-from math import cos, sin
+from common.helpers import cos, sin
 
 
 def polar_to_rect(radius, theta):

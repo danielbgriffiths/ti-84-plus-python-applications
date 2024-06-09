@@ -1,4 +1,4 @@
-from math import cos
+from common.helpers import cos
 
 from trigonometry.degrees_to_radians.download import degrees_to_radians
 

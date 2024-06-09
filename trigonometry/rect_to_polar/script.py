@@ -1,4 +1,4 @@
-from math import sqrt, atan
+from common.helpers import sqrt, atan
 
 
 def rect_to_polar(x, y):

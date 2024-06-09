@@ -1,5 +1,5 @@
 import unittest
-from math import sin, cos, pi
+from common.helpers import sin, cos, pi
 
 from calculus.definite_integral.script import (
     get_h,

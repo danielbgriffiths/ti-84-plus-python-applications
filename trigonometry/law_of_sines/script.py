@@ -1,4 +1,4 @@
-from math import sin, asin
+from common.helpers import sin, asin
 
 from trigonometry.radians_to_degrees.script import radians_to_degrees
 

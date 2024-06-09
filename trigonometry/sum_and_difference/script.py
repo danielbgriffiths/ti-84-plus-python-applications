@@ -1,4 +1,4 @@
-from math import sin, cos, tan
+from common.helpers import sin, cos, tan
 
 
 def sin_sum(a, b):

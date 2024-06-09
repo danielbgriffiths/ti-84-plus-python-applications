@@ -1,5 +1,5 @@
 import unittest
-from math import sqrt, pi
+from common.helpers import sqrt, pi
 
 from trigonometry.rect_to_polar.script import rect_to_polar
 

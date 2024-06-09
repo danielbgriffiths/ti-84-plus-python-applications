@@ -1,5 +1,6 @@
 import unittest
-from math import sin, asin, radians, degrees
+from math import radians, degrees
+from common.helpers import sin, asin
 
 from trigonometry.law_of_sines.script import law_of_sines_angles, law_of_sines_sides
 
